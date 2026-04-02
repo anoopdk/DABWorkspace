@@ -1,7 +1,7 @@
 variables:
-  catalog_name:
+  catalog_env:
     description: "Catalog name to use for the project" 
-    default: ak_dev
+    default: dev
   schema: 
     description: "Schema name to use for the project"
     default: bronze

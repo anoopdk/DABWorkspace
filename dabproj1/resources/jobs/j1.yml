@@ -22,7 +22,7 @@ resources:
           notebook_task:
             notebook_path: ../../src/notebook1.ipynb
             base_parameters:
-              par1: ${var.par1}
+              par1: ak_${var.catalog_env}
               par2: ${var.par2}
             source: WORKSPACE
           environment_key: Default
