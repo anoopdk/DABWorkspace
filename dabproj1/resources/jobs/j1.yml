@@ -1,0 +1,41 @@
+resources:
+  jobs:
+    job_1:
+      name: job_11
+      description: pipeline 1
+      email_notifications:
+        on_success:
+          - anoopdk@gmail.com
+        on_failure:
+          - anoopdk@gmail.com
+        no_alert_for_skipped_runs: true
+      notification_settings:
+        no_alert_for_skipped_runs: true
+        no_alert_for_canceled_runs: true
+      trigger:
+        pause_status: UNPAUSED
+        periodic:
+          interval: 1
+          unit: WEEKS
+      tasks:
+        - task_key: nb_1
+          notebook_task:
+            notebook_path: ../../src/notebook1.ipynb
+            base_parameters:
+              par1: abc
+              par2: xyz
+            source: WORKSPACE
+          environment_key: Default
+      tags:
+        costcentre: ddd
+        env: dev
+      queue:
+        enabled: true
+      parameters:
+        - name: job_para
+          default: qqq
+      environments:
+        - environment_key: Default
+          spec:
+            environment_version: "5"
+      performance_target: STANDARD
