@@ -22,8 +22,8 @@ resources:
           notebook_task:
             notebook_path: ../../src/notebook1.ipynb
             base_parameters:
-              par1: abc
-              par2: xyz
+              par1: ${var.par1}
+              par2: ${var.par2}
             source: WORKSPACE
           environment_key: Default
       tags:
@@ -33,7 +33,7 @@ resources:
         enabled: true
       parameters:
         - name: job_para
-          default: qqq
+          default: ${var.job_para}
       environments:
         - environment_key: Default
           spec:

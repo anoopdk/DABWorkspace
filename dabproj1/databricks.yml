@@ -9,11 +9,11 @@ include:
   - resources/*/*.yml
 
 # Variable declarations. These variables are assigned in the dev/prod targets below.
-variables:
-  catalog:
-    description: The catalog to use
-  schema:
-    description: The schema to use
+# variables:
+#   catalog:
+#     description: The catalog to use
+#   schema:
+#     description: The schema to use
 
 targets:
   dev:
@@ -29,9 +29,9 @@ targets:
     workspace:
       host: https://dbc-0f540a54-8135.cloud.databricks.com
       root_path: /Workspace/${bundle.target}
-    variables:
-      catalog: ak_dev
-      schema: dev
+    # variables:
+    #   catalog: ak_dev
+    #   schema: dev
   prod:
     mode: production
     workspace:
@@ -39,9 +39,9 @@ targets:
       # We explicitly deploy to /Workspace/Users/anoopdk@gmail.com to make sure we only have a single copy.
       # root_path: /Workspace/Users/anoopdk@gmail.com/.bundle/${bundle.name}/${bundle.target}
       root_path: /Workspace/${bundle.target}
-    variables:
-      catalog: ak_dev
-      schema: prod
+    # variables:
+    #   catalog: ak_dev
+    #   schema: prod
     permissions:
       - user_name: anoopdk@gmail.com
         level: CAN_MANAGE

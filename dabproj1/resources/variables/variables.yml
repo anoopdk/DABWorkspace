@@ -1,0 +1,16 @@
+variables:
+  catalog_name:
+    description: "Catalog name to use for the project" 
+    default: ak_dev
+  schema: 
+    description: "Schema name to use for the project"
+    default: bronze
+  par1:
+    description: "Parameter 1 for notebook task"
+    default: eee
+  par2:
+    description: "Parameter 2 for notebook task"
+    default: ttt
+  job_para:
+    description: "Parameter for the job"
+    default: uuu
